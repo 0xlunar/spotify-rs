@@ -36,7 +36,7 @@ pub struct Builder<'s, F: AuthFlow, V: Verifier, E: Endpoint> {
 }
 
 #[derive(Clone, Debug)]
-pub(crate) struct Limit<const MIN: u32 = 1, const MAX: u32 = 50>(u32);
+pub(crate) struct Limit<const MIN: u32 = 1, const MAX: u32 = 100>(u32);
 
 impl<const MIN: u32, const MAX: u32> Limit<MIN, MAX> {
     pub(crate) fn new(n: u32) -> Self {
